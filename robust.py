@@ -7,7 +7,7 @@ from sklearn.linear_model import (
 from sklearn.svm import SVR
 
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_absolute_error
+from sklearn.metrics import mean_squared_error
 
 if __name__ == "__main__":
     dataset = pd.read_csv('./data/happiness_corrupt.csv')
@@ -26,4 +26,12 @@ if __name__ == "__main__":
         'RANSAC': RANSACRegressor(),
         'HUBER': HuberRegressor(epsilon=1.35)
     }
+
+    # Functions in Python can return more than one value
+    for name, estimator in estimators.items():
+        estimator.fit(X_train, y_train)
+        predictions = estimator.predict(X_test)
+
+        print('='*32)
+        print(f'{name} MSE: ', mean_squared_error(y_test, predictions))
 
