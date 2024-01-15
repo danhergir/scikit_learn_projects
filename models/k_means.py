@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.cluster import MiniBatchKMeans
 
 if __name__ == '__main__':
-    dataset = pd.read_csv('./data/candy.csv')
+    dataset = pd.read_csv('./in/candy.csv')
     print(dataset.head(10))
 
     # Since this is unsupervised learning, test and train data split is not required.

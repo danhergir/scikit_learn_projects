@@ -13,7 +13,7 @@ from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 
 if __name__ == "__main__":
-    df = pd.read_csv('./data/heart.csv')
+    df = pd.read_csv('./in/heart.csv')
     print(df.target.describe())
 
     X = df.drop(['target'], axis=1)

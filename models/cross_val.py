@@ -9,7 +9,7 @@ from sklearn.model_selection import (
 )
 
 if __name__ == '__main__':
-    dataset = pd.read_csv('./data/happiness.csv')
+    dataset = pd.read_csv('./in/happiness.csv')
 
     X = dataset.drop(['country', 'score'], axis=1)
     y = dataset['score']

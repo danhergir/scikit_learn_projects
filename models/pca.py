@@ -12,7 +12,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 
 if __name__ == "__main__":
-    dt_heart = pd.read_csv('./data/heart.csv')
+    dt_heart = pd.read_csv('./in/heart.csv')
     
     print(dt_heart.head(5))
 

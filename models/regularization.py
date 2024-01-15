@@ -10,7 +10,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 if __name__ == "__main__":
-    dataset = pd.read_csv('./data/happiness.csv')
+    dataset = pd.read_csv('./in/happiness.csv')
     print(dataset.describe)
 
     # Operating over the columns
